@@ -1,3 +1,127 @@
 {% extends 'shop/basic.html' %}
 
-{% block body %} <h1>Hi My Name is Junaid</h1> {% endblock %}
+{% block title %} Contact Us - Royal Products {% endblock %}
+
+{% block css %}
+
+
+{% endblock %}
+
+
+{% block body %}
+<main>
+    <div class="container">
+        <h1 class="text-center mt-5 mb-5 fw-bolder text-info">Contact Us</h1>
+        <form action="/shop/contact/" method="post" class="row g-3 fw-bold"> {% csrf_token %}
+            <div class="col-md-6">
+                <label for="name" class="form-label">Your Name :</label>
+                <input type="text" class="form-control" id="name" placeholder="your name" name="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="company_name" class="form-label">Company Name :</label>
+                <input type="text" class="form-control" id="company_name" placeholder="your company name"
+                    name="company_name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="e_mail" class="form-label">E-Mail :</label>
+                <input type="email" class="form-control" id="e_mail" placeholder="email" name="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="mob" class="form-label">Mobile No :</label>
+                <input type="tel" class="form-control" id="mob" placeholder="mobile no" name="mob" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City :</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="city" name="city" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State :</label>
+                <select id="inputState" class="form-select" name="state">
+                    <option selected>Choose...</option>
+                    <option>Andaman and Nicobar </option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Dadra and Nagar Haveli</option>
+                    <option>Daman and Diu </option>
+                    <option>Delhi</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Lakshadweep</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Orissa</option>
+                    <option>Puducherry</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                    <option>Telangana</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip :</label>
+                <input type="text" class="form-control" id="inputZip" name="pincode" placeholder="pincode" required>
+            </div>
+            <div class="col-12">
+                <label for="enquiry" class="form-label">Enquiry :</label>
+                <textarea class="form-control" placeholder="enter your enquiry" id="enquiry" name="enquiry"
+                    required></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-info fw-bold fs-5 px-3">Send</button>
+            </div>
+        </form>
+
+        <hr class="mb-3 mt-5">
+        <h3 class="container my-3 text-center">OR</h3>
+        <hr>
+        <h1 class="text-center mt-5 mb-3 fw-bolder text-info">Whatsapp</h1>
+        <a href="https://wa.me/+919892406540" class="text-decoration-none fw-bolder d-block mx-auto text-center fs-3" target="_blank">Click Here</a>
+
+    </div>
+</main>
+
+{% endblock %}
+
+{% block js %}
+     
+<script>
+
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    }
+    else {
+        cart = JSON.parse(localStorage.getItem('cart'))
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    }
+
+    $('.cart').click(function () {
+        var idstr = this.id.toString();
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        }
+        else {
+            cart[idstr] = 1;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart))
+    });
+
+</script>
+{% endblock %}

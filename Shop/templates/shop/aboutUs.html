@@ -1,3 +1,209 @@
 {% extends 'shop/basic.html' %}
 
-{% block body %} <h1>Hi My Name is Junaid</h1> {% endblock %}
+{% block title %} About Us - Royal Products {% endblock %}
+
+{% block css %}
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .founder_name{
+        padding-top: 150px;
+        padding-left: 180px;
+    }
+    
+    .founder_des{
+        padding-left: 220px;
+    }
+    .carousel-item img{
+    width: 100%;
+    height: 60vh;
+    }
+   
+
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<main>
+
+    <div id="myCarousel" class="carousel slide d-block mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../static/shop/p1.jpeg" class="d-block w-100 carousel_img" alt="">
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1 class="text-info fw-bolder">Playground</h1>
+                        <p><a class="btn text-white btn-info" href="#">Checkout</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../static/shop/o1.jpeg" class="d-block w-100 carousel_img" alt="">
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1 class="text-warning fw-bolder">Open Gym</h1>
+                        <p><a class="btn btn-warning text-white" href="#">Checkout</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../static/shop/gb-104.jpg" class="d-block w-100 carousel_img" alt="">
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1 class="text-success fw-bolder">Garden Bench</h1>
+                        <p><a class="btn btn-success text-white" href="#">Checkout</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing mt-3">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <a href="#"> <img src="../../static/shop/customer.png" alt="customer"
+                        class="img-fluid customer_img rounded mx-auto d-block"> </a>
+                <h3 class="text-center">1000 + Customer's</h3>
+                <p class="text-center">Some representative placeholder content for the three columns of text below the
+                    carousel. This is the first column.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <a href="#"> <img src="../../static/shop/shipped.png" alt="shipped"
+                        class="img-fluid customer_img rounded mx-auto d-block"> </a>
+                <h3 class="text-center">100K + product Shipped</h3>
+                <p class="text-center">Some representative placeholder content for the three columns of text below the
+                    carousel. This is the first column.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <a href="#"> <img src="../../static/shop/certified.png" alt="certified"
+                        class="img-fluid customer_img rounded mx-auto d-block"> </a>
+                <h3 class="text-center">Certified Company</h3>
+                <p class="text-center">And lastly this, the third column of representative placeholder content.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                    <h2 class="featurette-heading founder_name">MOHD SUHAIL SHAIKH</h2>
+                    <h5 class="founder_des">founder of Royal Products</h5>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+                        dy=".3em">500x500</text>
+                </svg>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading founder_name">ABDUL HAFIZ SHAIKH</h2>
+                <h5 class="founder_des">founder of Royal Products</h5>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+                        dy=".3em">500x500</text>
+                </svg>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+</main>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    }
+    else {
+        cart = JSON.parse(localStorage.getItem('cart'))
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    }
+
+    $('.cart').click(function () {
+      
+        var idstr = this.id.toString();
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        }
+        else {
+            cart[idstr] = 1;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart))
+    });
+
+
+</script>
+
+{% endblock %}
